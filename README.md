@@ -1,0 +1,4 @@
+placeholderKnockout
+===================
+
+Placeholder with KnockoutJS
