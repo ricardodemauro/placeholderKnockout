@@ -29,7 +29,6 @@
 
             viewModel.changedFlag.isChanged.subscribe(function (isChanged) {
                 if (isChanged) {
-                    LF.UI.Util.View.Log("model changed");
                     setTimeout(function () {
                         callback.apply(self)
                     }, 100);
