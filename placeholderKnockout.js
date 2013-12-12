@@ -54,7 +54,8 @@
 			});
             return this;
 		}
-		setViewModelAware(__opts.viewModel, updatedHandler).setTimeout(function(){
+		setViewModelAware(__opts.viewModel, updatedHandler);
+		setTimeout(function(){
 			initPlaceholder.apply(self)
 		}, 100);
 		return this;
