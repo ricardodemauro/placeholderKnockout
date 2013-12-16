@@ -50,8 +50,8 @@
 			    $('<span class="placeholderWrap"><label for="' + this.id + '">' + $this.attr('placeholder') + '</label></span>')
 			    .insertAfter($this)
 			    .append($this)
-			    .removeAttr('placeholder')
 			    .toggleClass('placeholder-changed', $this.val() !== '');
+                $this.removeAttr('placeholder');
 			});
             return this;
 		}
