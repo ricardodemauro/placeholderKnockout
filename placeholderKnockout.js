@@ -49,14 +49,16 @@
 			    if(!this.id) this.id='ph_' + (i); 
 			    $('<span class="placeholderWrap"><label for="' + this.id + '">' + $this.attr('placeholder') + '</label></span>')
 			    .insertAfter($this)
-			    .append($this); 
-			    $this.removeAttr('placeholder');
+			    .append($this)
+			    .removeAttr('placeholder')
+			    .toggleClass('placeholder-changed', $this.val() !== '');
 			});
             return this;
 		}
-		setViewModelAware(__opts.viewModel, updatedHandler);
-		setTimeout(function(){
-			initPlaceholder.apply(self)
+		
+        setTimeout(function(){
+			initPlaceholder.apply(self);
+			setViewModelAware(__opts.viewModel, updatedHandler);
 		}, 100);
 		return this;
 	};
